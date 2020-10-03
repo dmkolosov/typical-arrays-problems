@@ -21,6 +21,8 @@ exports.max = function max (array=[]) {
   return max;
 }
 
-exports.avg = function avg (array) {
-  return 0;
+exports.avg = function avg (array=[]) {
+  let avg=array.length>0?array[0]:0
+  avg=array.reduce((prev,cur)=>prev+cur,0)
+  return avg!=0?avg/array.length:0
 }
